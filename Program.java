@@ -1,18 +1,40 @@
-class Program{
-    public int Rollno = 1;
-    String name = "ABC";
-    char grade = 'A';
+// Sample program to take user input class as well
+import java.util.Scanner;
 
-    public void Display(){
-        System.out.println("Student Information is \n Rollno is" + Rollno);
-        System.out.println("Name=" + name);
-        System.out.println("Grade=" + grade);
+class Program {
+    int n;
+    String name;
+    char Grade;
+    float Marks;
+    double per;
+    boolean result;
+
+    public void accept() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number: ");
+        n = sc.nextInt();
+        System.out.println("Enter your name:");
+        name = sc.next();
+        System.out.println("Enter Marks");
+        Marks = sc.nextFloat();
+
+
     }
 
-    public static void main(String args[]){
+    public void display() {
+        System.out.println("Value of n is " + n);
+        System.out.println("Name is " +name);
+        System.out.println("Marks is" +Marks);
+        
+
+
+    }
+        public static void main(String[] args) {
         Program obj = new Program();
-        obj.Display();
+        obj.accept();
+        obj.display();
     }
+}
 
-    }
+
 
